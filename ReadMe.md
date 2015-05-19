@@ -19,7 +19,7 @@ The SDK works with the ActiGraph Link activity monitors and leverages the BlueTo
 #### What can I do with this SDK? ####
 
 - Connect with Link activity monitors from a mobile device via BT LE wireless
-- Enable streamin of raw accelerometer data (30 - 100 Hz)
+- Enable streaming of raw accelerometer data (30 - 100 Hz)
 - Configure (enable/disable) the monitor's embedded sensors
        * Accelerometer
        * Gyroscope
@@ -90,11 +90,11 @@ Stream raw monitor data to your app in near-realtime
 Actigraph has developed an open-source sample application that helps developers get started with the SDK.  Some screen images are provided in this section.
 
 ![](Documents/resources/Screenshot_2015-05-18-15-41-04.png)
-######Sample App. screen capture of device enumeration
+######Sample App screen capture of device enumeration
 ![](Documents/resources/Screenshot_2015-05-18-15-41-14.png)
-######Sample App. screen capture of device status
+######Sample App screen capture of device status
 ![](Documents/resources/Screenshot_2015-05-18-15-41-24.png)
-######Sample App. screen capture of raw data streaming
+######Sample App screen capture of raw data streaming
 
 
 #### Notes ####
