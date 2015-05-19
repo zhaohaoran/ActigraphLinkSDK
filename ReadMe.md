@@ -89,7 +89,14 @@ Stream raw monitor data to your app in near-realtime
 
 Actigraph has developed an open-source sample application that helps developers get started with the SDK.  Some screen images are provided in this section.
 
+![](Documents/resources/Screenshot_2015-05-18-15-41-04.png)
+######Sample App. screen capture of device enumeration
+![](Documents/resources/Screenshot_2015-05-18-15-41-14.png)
+######Sample App. screen capture of device status
+![](Documents/resources/Screenshot_2015-05-18-15-41-24.png)
+######Sample App. screen capture of raw data streaming
 
 
-API documentation located at Documents/index.html
-Device library used by example app located at LinkSDKExampleApp/agdevicelibrary-release.aar
+#### Notes ####
+* API documentation located at Documents/index.html
+* Device library used by example app located at LinkSDKExampleApp/agdevicelibrary-release.aar
