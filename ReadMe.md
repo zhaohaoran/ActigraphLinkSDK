@@ -47,7 +47,7 @@ Add the Link SDK to your mobile project and utilize the device library and liste
 * [AGDeviceLibrary](AGDeviceLibrary.md)
 * [AGDeviceLibraryListener](AGDeviceLibraryListener.md)
 
-The library uses JSON messaging format to further decouple the data layer dependencies from your particular use case.
+The library uses JSON message formatting to further decouple the data layer dependencies from your particular use case.
 
 ###### IMU Configuration
 ```
