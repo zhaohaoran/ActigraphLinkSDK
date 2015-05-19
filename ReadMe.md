@@ -50,7 +50,7 @@ Add the Link SDK to your mobile project and utilize the device library and liste
 The library uses JSON messaging format to further decouple the data layer dependencies from your particular use case.
 
 ###### IMU Configuration
-```JSON
+```
 {
     "imu": {
     	"accelerometer": "disable",
@@ -64,7 +64,7 @@ The library uses JSON messaging format to further decouple the data layer depend
 Stream raw monitor data to your app in near-realtime
 
 ###### Raw Data Stream
-```JSON
+```
 {
     "raw": {
     	“device”: “TAS1D44140005”,
