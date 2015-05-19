@@ -1,4 +1,4 @@
-# Documentation
+## AGDeviceLibrary Documentation
 
 #### `public class AGDeviceLibrary`
 
