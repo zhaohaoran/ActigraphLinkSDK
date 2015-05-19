@@ -101,4 +101,4 @@ Actigraph has developed an open-source sample application that helps developers 
 
 #### Notes ####
 * API documentation located at Documents/index.html
-* Device library used by example app located at LinkSDKExampleApp/agdevicelibrary-release.aar
+* Device library used by example app located at LinkSDKExampleApp/libs/agdevicelibrary-release.aar
