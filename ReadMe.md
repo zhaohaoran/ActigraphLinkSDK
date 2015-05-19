@@ -1,7 +1,7 @@
 ## ActiGraph Link SDK for Mobile Platforms ##
 
 ###### 2015-05-18
-###### Version 1.0 Technical overview [limited release]
+###### Version 1.0 Technical overview
 
 ####  Contents  ####
 - Introduction
@@ -26,14 +26,16 @@ The SDK works with the ActiGraph Link activity monitors and leverages the BlueTo
        * Magnetometer
        * Temperature
 
-#### Integrating with the Mobile SDK ####
+#### Using the Mobile SDK ####
 
 
 1. Obtain the SDK from GitHub:
-	* Actigraph Link SDK for Android with Sample App [https://github.com/actigraph/ActigraphLinkSDK](https://github.com/actigraph/ActigraphLinkSDK "Actigraph Link SDK")
+	* Actigraph Link SDK is available for Android (minimum supported version is 4.3 (API Level 18)) [https://github.com/actigraph/ActigraphLinkSDK](https://github.com/actigraph/ActigraphLinkSDK "Actigraph Link SDK and sample app")
 	* Actigraph Link SDK for IOS (Not available at this time)
-2. Get our credentials for using the SDK with you Link monitors. Specifically, this will be an ActiGraph CentrePoint Account:
-	* Contact sales@actigraphcorp.com
+2. Obtain Actigraph Link activity monitors and an ActiGraph CentrePoint Account:
+	* Contact sales@actigraphcorp.com to set up your CentrePoint account
+	* Be sure to request that Link SDK is enabled 
+	* The Link monitors will require a minimum firmware level of 1.2.2
 3. Consult example application and API documentation:
 	* [AGDeviceLibrary](AGDeviceLibrary.md)
 	* [AGDeviceLibraryListener](AGDeviceLibraryListener.md)
