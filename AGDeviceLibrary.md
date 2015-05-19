@@ -22,14 +22,14 @@ Method used to register your application with this instance of AGDeviceLibrary.
 
 Starts device enumeration for a default interval of 5 seconds. Results are returned via "device" and "devices" messages in OnDeviceData from AGDeviceLibraryListener.
 
- * **See also:** <a href="file:JSON_Message_Definitions.pdf">JSON Message Definitions</a>
+ * **See also:** [JSON Message Definitions](Documents/actigraph/deviceapi/JSON_Message_Definitions.pdf)
 
 #### `public void EnumerateDevices(long duration)`
 
 Starts device enumeration for duration specified. Results are returned via "device" and "devices" messages in OnDeviceData from AGDeviceLibraryListener.
 
  * **Parameters:** `duration` — duration to enumerate (specified in milliseconds)
- * **See also:** <a href="file:JSON_Message_Definitions.pdf">JSON Message Definitions</a>
+ * **See also:** [JSON Message Definitions](Documents/actigraph/deviceapi/JSON_Message_Definitions.pdf)
 
 #### `public void CancelEnumeration()`
 
@@ -40,14 +40,14 @@ Cancels in progress EnumerateDevice requests.
 Establishes connection to a device. Connection and disconnection messages are returned via "deviceConnected" and "deviceDisconnected" messages in OnDeviceStatus from AGDeviceLibraryListener.
 
  * **Parameters:** `deviceId` — serial number of the device you wish to connect to
- * **See also:** <a href="file:JSON_Message_Definitions.pdf">JSON Message Definitions</a>
+ * **See also:** [JSON Message Definitions](Documents/actigraph/deviceapi/JSON_Message_Definitions.pdf)
 
 #### `public void ConfigureDevice(String config)`
 
 Applies desired configuration to connected device.
 
  * **Parameters:** `config` — JSON formatted configuration message
- * **See also:** <a href="file:JSON_Message_Definitions.pdf">JSON Message Definitions</a>
+ * **See also:** [JSON Message Definitions](Documents/actigraph/deviceapi/JSON_Message_Definitions.pdf)
 
 #### `public void DisconnectFromDevice()`
 
@@ -63,4 +63,4 @@ Query serial number of connected device.
 
 Query status of connected device. Results are returned via "status" message in OnDeviceStatus from AGDeviceLibraryListener.
 
- * **See also:** <a href="file:JSON_Message_Definitions.pdf">JSON Message Definitions</a>
+ * **See also:** [JSON Message Definitions](Documents/actigraph/deviceapi/JSON_Message_Definitions.pdf)
