@@ -1,7 +1,7 @@
 ## ActiGraph Link SDK for Mobile Platforms ##
 
-#######2015-05-18
-#######Version 1.0 Technical overview [limited release]
+###### 2015-05-18
+###### Version 1.0 Technical overview [limited release]
 
 ####  Contents  ####
 - Introduction
@@ -66,21 +66,21 @@ Stream raw monitor data to your app in near-realtime
 ###### Raw Data Stream
 ```JSON
 {
-	"raw": {
-    “device”: “TAS1D44140005”,
-    "timestamp": 1427113646,
-    "acceleration": [
-      {
-        "x": 0.0003,
-        "y": 1.0002,
-        "z": 0.0001
-      },
-      {
-        "x": 0.0001,
-        "y": 0.0003,
-        "z": 1.0001
-      }
-    ]
+    "raw": {
+    	“device”: “TAS1D44140005”,
+    	"timestamp": 1427113646,
+    	"acceleration": [
+      		{
+        		"x": 0.0003,
+        		"y": 1.0002,
+        		"z": 0.0001
+      		},
+      		{
+        		"x": 0.0001,
+        		"y": 0.0003,
+        		"z": 1.0001
+      		}
+    	]
   }
 }
 ```
