@@ -3,13 +3,6 @@
 ###### 2015-05-18
 ###### Version 1.0 Technical overview
 
-####  Contents  ####
-- Introduction
-- What can I do with this SDK?
-- Integrating with the Mobile SDK
-- Technical Overview
-- Sample Application
-
 
 #### Introduction ####
 The Actigraph Software Development Kit (SDK) for mobile platforms allows the researcher community to build solutions for their use cases on top of the Actigraph core technologies.  
