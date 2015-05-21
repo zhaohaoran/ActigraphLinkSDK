@@ -84,12 +84,13 @@ Stream raw monitor data to your app in near-realtime
 
 Actigraph has developed an open-source sample application to help developers get started with the SDK.  Screen images are provided in this section to illustrate the sample app.
 
-![](https://github.com/actigraph/ActigraphLinkSDK/blob/master/Documents/resources/Screenshot_2015-05-18-15-41-04.png)
-######Sample App screen capture of device enumeration
-![](https://github.com/actigraph/ActigraphLinkSDK/blob/master/Documents/resources/Screenshot_2015-05-18-15-41-14.png)
-######Sample App screen capture of device status
-![](https://github.com/actigraph/ActigraphLinkSDK/blob/master/Documents/resources/Screenshot_2015-05-18-15-41-24.png)
-######Sample App screen capture of raw data streaming
+![Sample app screen capture of device enumeration](https://cloud.githubusercontent.com/assets/1958634/7756698/a174cac6-ffc2-11e4-9e07-8e5c3c0e2bfe.png)
+######Sample app screen capture of device enumeration
+![Sample app screen capture of device status](https://cloud.githubusercontent.com/assets/1958634/7756618/1175d28a-ffc2-11e4-9778-4287550f5e0b.png)
+######Sample app screen capture of device status
+![Sample app screen capture of raw data streaming](https://cloud.githubusercontent.com/assets/1958634/7756724/c65b9856-ffc2-11e4-81d9-4a6752e4f40b.png)
+######Sample app screen capture of raw data streaming
+
 
 
 #### Notes ####
