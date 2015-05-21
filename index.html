@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="ActigraphLinkSDK : Actigraph Link Software Development Kit (SDK) for mobile platforms">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>ActigraphLinkSDK</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/actigraph/ActigraphLinkSDK">View on GitHub</a>
+
+          <h1 id="project_title">ActigraphLinkSDK</h1>
+          <h2 id="project_tagline">Actigraph Link Software Development Kit (SDK) for mobile platforms</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/actigraph/ActigraphLinkSDK/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/actigraph/ActigraphLinkSDK/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a id="actigraph-link-sdk-for-mobile-platforms" class="anchor" href="#actigraph-link-sdk-for-mobile-platforms" aria-hidden="true"><span class="octicon octicon-link"></span></a>ActiGraph Link SDK for Mobile Platforms</h2>
+
+<h6>
+<a id="2015-05-18" class="anchor" href="#2015-05-18" aria-hidden="true"><span class="octicon octicon-link"></span></a>2015-05-18</h6>
+
+<h6>
+<a id="version-10-technical-overview" class="anchor" href="#version-10-technical-overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version 1.0 Technical overview</h6>
+
+<h4>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h4>
+
+<p>The Actigraph Link Software Development Kit (SDK) for mobile platforms allows the researcher community to build solutions for their use cases on top of the Actigraph core technologies.<br>
+The SDK works with the ActiGraph Link activity monitors and leverages the BlueTooth LE wireless protocol.</p>
+
+<h4>
+<a id="what-can-i-do-with-the-link-sdk" class="anchor" href="#what-can-i-do-with-the-link-sdk" aria-hidden="true"><span class="octicon octicon-link"></span></a>What can I do with the Link SDK?</h4>
+
+<ul>
+<li>Connect with Link activity monitors from a mobile device via BT LE wireless</li>
+<li>Enable streaming of raw accelerometer data (30 - 100 Hz)</li>
+<li>Configure (enable/disable) the monitor's embedded sensors
+
+<ul>
+<li>Accelerometer</li>
+<li>Gyroscope</li>
+<li>Magnetometer</li>
+<li>Temperature</li>
+</ul>
+</li>
+</ul>
+
+<h4>
+<a id="using-the-mobile-sdk" class="anchor" href="#using-the-mobile-sdk" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using the Mobile SDK</h4>
+
+<ol>
+<li>Obtain the SDK from GitHub:
+
+<ul>
+<li>Actigraph Link SDK is available for Android (minimum supported version is 4.3 (API Level 18)) <a href="https://github.com/actigraph/ActigraphLinkSDK" title="Actigraph Link SDK and sample app">https://github.com/actigraph/ActigraphLinkSDK</a>
+</li>
+<li>Actigraph Link SDK for IOS (Not available at this time)</li>
+</ul>
+</li>
+<li>Obtain Actigraph Link activity monitors and an ActiGraph CentrePoint Account:
+
+<ul>
+<li>Contact <a href="mailto:sales@actigraphcorp.com">sales@actigraphcorp.com</a> to set up your CentrePoint account</li>
+<li>Be sure to request that Link SDK is enabled </li>
+<li>The Link monitors will require a minimum firmware level of 1.2.2</li>
+</ul>
+</li>
+<li>Consult example application and API documentation:
+
+<ul>
+<li><a href="AGDeviceLibrary.md">AGDeviceLibrary</a></li>
+<li><a href="AGDeviceLibraryListener.md">AGDeviceLibraryListener</a></li>
+<li>Also located at Documents/index.html when downloaded</li>
+</ul>
+</li>
+</ol>
+
+<h4>
+<a id="technical-overview" class="anchor" href="#technical-overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Technical Overview</h4>
+
+<p>Add the Link SDK to your mobile project and utilize the device library and listener to communicate with ActiGraph Link monitors.  The device library has methods which facilitate establishing connections to Link devices and changing the device configuration.</p>
+
+<ul>
+<li><a href="AGDeviceLibrary.md">AGDeviceLibrary</a></li>
+<li><a href="AGDeviceLibraryListener.md">AGDeviceLibraryListener</a></li>
+</ul>
+
+<p>The library uses JSON message formatting to further decouple the data layer dependencies from your particular use case.</p>
+
+<h6>
+<a id="imu-configuration" class="anchor" href="#imu-configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>IMU Configuration</h6>
+
+<pre><code>{
+    "imu": {
+        "accelerometer": "disable",
+        "gyroscope": "enable",
+        "magnetometer": "disable",
+        "temperature": "disable"
+    }
+}
+</code></pre>
+
+<p>Stream raw monitor data to your app in near-realtime</p>
+
+<h6>
+<a id="raw-data-stream" class="anchor" href="#raw-data-stream" aria-hidden="true"><span class="octicon octicon-link"></span></a>Raw Data Stream</h6>
+
+<pre><code>{
+    "raw": {
+        “device”: “TAS1D44140005”,
+        "timestamp": 1427113646,
+        "acceleration": [
+            {
+                "x": 0.0003,
+                "y": 1.0002,
+                "z": 0.0001
+            },
+            {
+                "x": 0.0001,
+                "y": 0.0003,
+                "z": 1.0001
+            }
+        ]
+  }
+}
+</code></pre>
+
+<h4>
+<a id="sample-application" class="anchor" href="#sample-application" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Application</h4>
+
+<p>Actigraph has developed an open-source sample application to help developers get started with the SDK.  Screen images are provided in this section to illustrate the sample app.</p>
+
+<p><img src="https://github.com/actigraph/ActigraphLinkSDK/blob/master/Documents/resources/Screenshot_2015-05-18-15-41-04.png" alt=""></p>
+
+<h6>
+<a id="sample-app-screen-capture-of-device-enumeration" class="anchor" href="#sample-app-screen-capture-of-device-enumeration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample App screen capture of device enumeration</h6>
+
+<p><img src="https://github.com/actigraph/ActigraphLinkSDK/blob/master/Documents/resources/Screenshot_2015-05-18-15-41-14.png" alt=""></p>
+
+<h6>
+<a id="sample-app-screen-capture-of-device-status" class="anchor" href="#sample-app-screen-capture-of-device-status" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample App screen capture of device status</h6>
+
+<p><img src="https://github.com/actigraph/ActigraphLinkSDK/blob/master/Documents/resources/Screenshot_2015-05-18-15-41-24.png" alt=""></p>
+
+<h6>
+<a id="sample-app-screen-capture-of-raw-data-streaming" class="anchor" href="#sample-app-screen-capture-of-raw-data-streaming" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample App screen capture of raw data streaming</h6>
+
+<h4>
+<a id="notes" class="anchor" href="#notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes</h4>
+
+<ul>
+<li>Example application and library created using Android Studio 1.1.0</li>
+<li>API documentation located at Documents/index.html</li>
+<li>Device library used by example application located at LinkSDKExampleApp/libs/agdevicelibrary-release.aar</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">ActigraphLinkSDK maintained by <a href="https://github.com/actigraph">actigraph</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
