@@ -23,6 +23,9 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+/* AGDeviceLibrary:
+        Import ActiGraph device library.
+*/
 import actigraph.deviceapi.*;
 
 public class MainActivity extends ActionBarActivity implements AGDeviceLibraryListener {
@@ -190,9 +193,9 @@ public class MainActivity extends ActionBarActivity implements AGDeviceLibraryLi
                     buttonState = false;
                 } else {
                     /* AGDeviceLibrary:
-                        Start a 3 second enumeration
+                        Start a 6 second enumeration
                     */
-                    agDeviceLibrary.EnumerateDevices(3000);
+                    agDeviceLibrary.EnumerateDevices(6000);
                     enumerateButton.setText("Searching");
                     mDeviceListAdapter.clear();
 
@@ -269,7 +272,7 @@ public class MainActivity extends ActionBarActivity implements AGDeviceLibraryLi
                 ////////////////////////////////
                 // Known Keys
                 //
-                // device : Identifies a found device during enumeration. Only appears during enumeration
+                // found : Identifies a found device during enumeration. Only appears during enumeration
                 // devices: Raised once enumeration has completed, and contains an array of found devices
                 //
                 //
@@ -293,7 +296,6 @@ public class MainActivity extends ActionBarActivity implements AGDeviceLibraryLi
 
                     // Since we're waiting on the the search to end (after 5 seconds, forced)
                     // We'll enable the button to start searching again here
-
                     buttonState = false;
                     runOnUiThread(uiRunnable);
 
@@ -333,7 +335,6 @@ public class MainActivity extends ActionBarActivity implements AGDeviceLibraryLi
                             streamScrollView.fullScroll(ScrollView.FOCUS_DOWN);
                         }
                     });
-
                 }
             }
 
@@ -453,7 +454,9 @@ public class MainActivity extends ActionBarActivity implements AGDeviceLibraryLi
         }
 
         public void addDevice(String serial, Boolean isConnected) {
-            devices.add(new DeviceInfo(serial, isConnected));
+            if (getItem(serial) == null) {
+                devices.add(new DeviceInfo(serial, isConnected));
+            }
         }
 
         public void clear () { devices.clear(); }
