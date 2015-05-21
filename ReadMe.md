@@ -93,5 +93,6 @@ Actigraph has developed an open-source sample application that helps developers 
 
 
 #### Notes ####
+* Example application and library created using Android Studio 1.1.0
 * API documentation located at Documents/index.html
-* Device library used by example app located at LinkSDKExampleApp/libs/agdevicelibrary-release.aar
+* Device library used by example application located at LinkSDKExampleApp/libs/agdevicelibrary-release.aar
