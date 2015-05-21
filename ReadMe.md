@@ -5,11 +5,11 @@
 
 
 #### Introduction ####
-The Actigraph Software Development Kit (SDK) for mobile platforms allows the researcher community to build solutions for their use cases on top of the Actigraph core technologies.  
+The Actigraph Link Software Development Kit (SDK) for mobile platforms allows the researcher community to build solutions for their use cases on top of the Actigraph core technologies.  
 The SDK works with the ActiGraph Link activity monitors and leverages the BlueTooth LE wireless protocol.
 
 
-#### What can I do with this SDK? ####
+#### What can I do with the Link SDK? ####
 
 - Connect with Link activity monitors from a mobile device via BT LE wireless
 - Enable streaming of raw accelerometer data (30 - 100 Hz)
@@ -82,7 +82,7 @@ Stream raw monitor data to your app in near-realtime
 
 #### Sample Application ####
 
-Actigraph has developed an open-source sample application that helps developers get started with the SDK.  Some screen images are provided in this section.
+Actigraph has developed an open-source sample application to help developers get started with the SDK.  Screen images are provided in this section to illustrate the sample app.
 
 ![](Documents/resources/Screenshot_2015-05-18-15-41-04.png)
 ######Sample App screen capture of device enumeration
