@@ -1,3 +1,8 @@
+---
+layout: post
+title: AGDeviceLibrary Documentation
+---
+
 ## AGDeviceLibrary Documentation
 
 #### `public class AGDeviceLibrary`
