@@ -30,8 +30,8 @@ The SDK works with the ActiGraph Link activity monitors and leverages the BlueTo
 	* Be sure to request that Link SDK is enabled 
 	* The Link monitors will require a minimum firmware level of 1.2.2
 3. Consult example application and API documentation:
-	* [AGDeviceLibrary.md](AGDeviceLibrary.md "AGDeviceLibrary")
-	* [AGDeviceLibraryListener.md](AGDeviceLibraryListener.md "AGDeviceLibraryListener")
+	* [AGDeviceLibrary](AGDeviceLibrary.md)
+	* [AGDeviceLibraryListener](AGDeviceLibraryListener.md)
 	* Also located at Documents/index.html when downloaded
 
 
