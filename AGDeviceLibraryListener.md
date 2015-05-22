@@ -1,8 +1,3 @@
----
-layout: post
-title: AGDeviceLibraryListener Documentation
----
-
 ## AGDeviceLibraryListener Documentation
 
 #### `public interface AGDeviceLibraryListener`
