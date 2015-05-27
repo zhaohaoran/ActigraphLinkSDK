@@ -3,6 +3,13 @@
 ###### 2015-05-18
 ###### Technical overview
 
+#### Version History ####
+5/18/2015 - v.1.0 - Release of generic technical overview
+5/27/2015 - v.1.1 - Added ALPHA notations and paragraph on ALPHA release
+
+
+#### ALPHA Release ####
+This release of the Link SDK is currently in ALPHA state.  Currently, the SDK requires that the LINK device run a specific internal release of Link firmware.  For the BETA release, Link firmware will be public but will require that initialization of the device be handled by ActiGraph's CentrePoint study admin system (subscription required).  
 
 #### Introduction ####
 The Actigraph Link Software Development Kit (SDK) for mobile platforms allows the researcher community to build solutions for their use cases on top of the Actigraph core technologies.  
