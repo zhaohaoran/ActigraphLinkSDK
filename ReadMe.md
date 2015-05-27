@@ -1,7 +1,7 @@
-## ActiGraph Link SDK for Mobile Platforms ##
+## ActiGraph Link SDK for Mobile Platforms - ALPHA##
 
 ###### 2015-05-18
-###### Version 1.0 Technical overview
+###### Technical overview
 
 
 #### Introduction ####
