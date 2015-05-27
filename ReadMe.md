@@ -4,8 +4,8 @@
 ###### Technical overview
 
 #### Version History ####
-5/18/2015 - v.1.0 - Release of generic technical overview
-5/27/2015 - v.1.1 - Added ALPHA notations and paragraph on ALPHA release
+* 5/18/2015 - v.1.0 - Release of generic technical overview
+* 5/27/2015 - v.1.1 - Added ALPHA notations and paragraph on ALPHA release
 
 
 #### ALPHA Release ####
