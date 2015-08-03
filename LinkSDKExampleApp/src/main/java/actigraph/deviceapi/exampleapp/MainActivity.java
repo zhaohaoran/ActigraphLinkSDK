@@ -20,7 +20,10 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 
 /* AGDeviceLibrary:
@@ -37,6 +40,7 @@ public class MainActivity extends ActionBarActivity implements AGDeviceLibraryLi
     private Button startIMUButton;
     private Button stopIMUButton;
     private Button deviceStatusButton;
+    private Button epochDownloadButton;
     private ListView serialListView;
     private Runnable uiRunnable;
     private Boolean  buttonState = false;
@@ -47,6 +51,9 @@ public class MainActivity extends ActionBarActivity implements AGDeviceLibraryLi
     private ScrollView streamScrollView;
     private int        numReceivedStreams;
     private Context self;
+
+    private boolean requestingEpochDownload = false;
+    private final int NUM_EPOCH_MINUTES_TO_DOWNLOAD = 210;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +70,10 @@ public class MainActivity extends ActionBarActivity implements AGDeviceLibraryLi
         startIMUButton    = (Button)findViewById(R.id.startIMUButton);
         stopIMUButton     = (Button)findViewById(R.id.stopIMUButton);
         deviceStatusButton = (Button)findViewById(R.id.deviceStatus);
+        epochDownloadButton = (Button)findViewById(R.id.epochDownloadButton);
+
+        epochDownloadButton.setText("Download Last " + String.format("%.2f", (double)NUM_EPOCH_MINUTES_TO_DOWNLOAD / 60) +
+                                        " hour(s) of Epoch Data");
 
 
         deviceStatusButton.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +86,19 @@ public class MainActivity extends ActionBarActivity implements AGDeviceLibraryLi
             }
         });
 
+        epochDownloadButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                requestingEpochDownload = true;
+
+                 /* AGDeviceLibrary:
+                    Get the device status JSON of a connected device for use in calculation
+                    epoch download window
+                 */
+                agDeviceLibrary.GetDeviceStatus();
+            }
+        });
+
         startIMUButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,7 +106,7 @@ public class MainActivity extends ActionBarActivity implements AGDeviceLibraryLi
                 JSONObject imuMessage = new JSONObject();
 
                 try {
-                    imuData.put("temperature", "disable");
+                    imuData.put("temperature", "enable");
                     imuData.put("magnetometer", "enable");
                     imuData.put("gyroscope", "enable");
                     imuData.put("accelerometer", "enable");
@@ -199,6 +223,15 @@ public class MainActivity extends ActionBarActivity implements AGDeviceLibraryLi
                     enumerateButton.setText("Searching");
                     mDeviceListAdapter.clear();
 
+                    /* AGDeviceLibrary:
+                        If we were connected to a device before we performed the enumerate, query
+                        the library for that device and add it to our results list.
+                    */
+                    if (agDeviceLibrary.GetConnectedDevice() != null) {
+                        shouldConnect = false;
+                        mDeviceListAdapter.addDevice(agDeviceLibrary.GetConnectedDevice(), true);
+                    }
+
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -278,67 +311,99 @@ public class MainActivity extends ActionBarActivity implements AGDeviceLibraryLi
                 //
                 ////////////////////////////////
 
-                if(key.equals("device")) {
-                    String foundDevice = jData.getString(key);
+                switch (key) {
+                    case "device":
+                        String foundDevice = jData.getString(key);
 
-                    // Add our found device to the list
-                    mDeviceListAdapter.addDevice(foundDevice, false);
+                        // Add our found device to the list
+                        mDeviceListAdapter.addDevice(foundDevice, false);
 
-                    // Always update the UI on the UI Thread, we could be doing this from anywhere
-                    // Let the table know we just got some new data
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() { mDeviceListAdapter.notifyDataSetChanged(); }
-                    });
-
-                }
-                else if (key.equals("devices")) {
-
-                    // Since we're waiting on the the search to end (after 5 seconds, forced)
-                    // We'll enable the button to start searching again here
-                    buttonState = false;
-                    runOnUiThread(uiRunnable);
-
-                    /* AGDeviceLibrary:
-                        If we were connected to a device before we performed the enumerate, query
-                        the library for that device and add it to our results list.
-                    */
-                    if (agDeviceLibrary.GetConnectedDevice() != null) {
-                        shouldConnect = false;
-                        mDeviceListAdapter.addDevice(agDeviceLibrary.GetConnectedDevice(), true);
-
+                        // Always update the UI on the UI Thread, we could be doing this from anywhere
+                        // Let the table know we just got some new data
                         runOnUiThread(new Runnable() {
                             @Override
-                            public void run() { mDeviceListAdapter.notifyDataSetChanged(); }
+                            public void run() {
+                                mDeviceListAdapter.notifyDataSetChanged();
+                            }
                         });
-                    }
-                }
-                else {
 
-                    // Something, something, streamed output
+                        break;
+                    case "devices":
 
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                           if (++numReceivedStreams == 4) {
-                               numReceivedStreams = 0;
-                               streamTextView.setText("");
-                           }
-                           streamTextView.append(data);
-                           streamTextView.append("\n");
-                        }
-                    });
+                        // Since we're waiting on the the search to end (after 5 seconds, forced)
+                        // We'll enable the button to start searching again here
+                        buttonState = false;
+                        runOnUiThread(uiRunnable);
 
-                    streamScrollView.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            streamScrollView.fullScroll(ScrollView.FOCUS_DOWN);
-                        }
-                    });
+                        break;
+                    default:
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                if (++numReceivedStreams == 4) {
+                                    numReceivedStreams = 0;
+                                    streamTextView.setText("");
+                                }
+                                streamTextView.append(data);
+                                streamTextView.append("\n");
+                            }
+                        });
+
+                        streamScrollView.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                streamScrollView.fullScroll(ScrollView.FOCUS_DOWN);
+                            }
+                        });
+                        break;
                 }
             }
 
         } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void requestEpoch(int numMinutesToDownload, String startDate, String stopDate) {
+        final SimpleDateFormat sdf;
+        sdf = new SimpleDateFormat("MM-dd-yyyy kk:mm:ss");
+
+        long targetstartdatetime;
+        long startdatetime;
+        long stopdatetime;
+
+        Date date;
+
+        try {
+            date = sdf.parse(startDate);
+            startdatetime = date.getTime() / 1000;
+
+            date = sdf.parse(stopDate);
+            stopdatetime = date.getTime() / 1000;
+
+            if (stopdatetime - ((numMinutesToDownload - 1) * 60) >= startdatetime) {
+                targetstartdatetime = stopdatetime - ((numMinutesToDownload - 1) * 60);
+            } else {
+                targetstartdatetime = startdatetime;
+            }
+
+            date = new Date(targetstartdatetime * 1000);
+
+            JSONObject epochMessage = new JSONObject();
+            JSONObject epochData = new JSONObject();
+
+            try {
+                epochData.put("startdatetime", sdf.format(date));
+                epochData.put("stopdatetime", stopDate);
+                epochMessage.put("epoch", epochData);
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            agDeviceLibrary.ConfigureDevice(epochMessage.toString());
+
+        } catch (ParseException e) {
             e.printStackTrace();
         }
     }
@@ -372,7 +437,10 @@ public class MainActivity extends ActionBarActivity implements AGDeviceLibraryLi
                     });
                 } else if (key.equals("deviceDisconnected")) {
                     shouldConnect = true;
-                    ((DeviceInfo) mDeviceListAdapter.getItem(connectedDevice)).mIsConnected = false;
+                    DeviceInfo deviceInf = (DeviceInfo)mDeviceListAdapter.getItem(connectedDevice);
+                    if (deviceInf != null) {
+                        deviceInf.mIsConnected = false;
+                    }
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -403,7 +471,36 @@ public class MainActivity extends ActionBarActivity implements AGDeviceLibraryLi
 
                         }
                     }
-                }else {
+
+                    //Clear this request in the event of an error
+                    requestingEpochDownload = false;
+                } else if (requestingEpochDownload && key.equals("status")) {
+                    String startDate = null;
+                    String stopDate = null;
+                    final JSONObject statusInfo = jData.getJSONObject((key));
+                    Iterator<?> j = statusInfo.keys();
+                    while (j.hasNext()) {
+                        key = (String)j.next();
+                        if (key.equals("epoch")) {
+                            final JSONObject epochInfo = statusInfo.getJSONObject(key);
+                            Iterator<?> k = epochInfo.keys();
+                            while (k.hasNext()) {
+                                key = (String)k.next();
+                                if (key.equals("startdatetime")) {
+                                    startDate = epochInfo.getString(key);
+                                } else if (key.equals("stopdatetime")) {
+                                    stopDate = epochInfo.getString(key);
+                                }
+                            }
+                        }
+                    }
+
+                    if (startDate != null && stopDate != null) {
+                        requestEpoch(NUM_EPOCH_MINUTES_TO_DOWNLOAD, startDate, stopDate);
+                    }
+
+                    requestingEpochDownload = false;
+                } else {
 
                     // Other status outputs are just added to the text view
 
