@@ -20,6 +20,7 @@ The SDK works with the ActiGraph Link activity monitors and leverages the BlueTo
 
 - Connect with Link activity monitors from a mobile device via BT LE wireless
 - Enable streaming of raw accelerometer data (30 - 100 Hz)
+- Download minute summary data (epoch data) from the monitor
 - Configure (enable/disable) the monitor's embedded sensors
        * Accelerometer
        * Gyroscope
@@ -31,7 +32,7 @@ The SDK works with the ActiGraph Link activity monitors and leverages the BlueTo
 
 1. Obtain the SDK from GitHub:
 	* Actigraph Link SDK is available for Android (minimum supported version is 4.3 (API Level 18)) [https://github.com/actigraph/ActigraphLinkSDK](https://github.com/actigraph/ActigraphLinkSDK "Actigraph Link SDK and sample app")
-	* Actigraph Link SDK for IOS (Not available at this time)
+	* Actigraph Link SDK for IOS (estimated release October 2015)
 2. Obtain Actigraph Link activity monitors and an ActiGraph CentrePoint Account:
 	* Contact sales@actigraphcorp.com to set up your CentrePoint account
 	* Be sure to request that Link SDK is enabled 
