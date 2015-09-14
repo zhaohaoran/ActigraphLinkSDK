@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 ActiGraph. All rights reserved.
 //
 
-#ifndef AGDeviceSDK_AGLinkSDKDelegate_h
-#define AGDeviceSDK_AGLinkSDKDelegate_h
+#ifndef AGDeviceSDK_AGDeviceSDKDelegate_h
+#define AGDeviceSDK_AGDeviceSDKDelegate_h
 
 @protocol AGDeviceSDKDelegate <NSObject>
 -(void)OnDeviceData:(NSString*)data;
