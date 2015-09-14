@@ -13,6 +13,13 @@ This release of the Link SDK is currently in ALPHA state.  Currently, the SDK re
 1. Download the following files and include them in your project
  - [agdevicelibrary-release.aar](/actigraph/ActigraphLinkSDK/tree/master/LinkSDKExampleApp/libs/agdevicelibrary-release.aar)
 
+#### Android Studio Instructions
+- Download .aar file
+- Add file to libs folder located under your *Project Name*/*Your app name*/libs/
+- File > New > New Module > Import .aar/Jar > Browse for libs/agdevicelibrary-release.aar
+- Add Import Statement import actigraph.deviceapi.*;
+
+
 ## Documentation
 - [AGDeviceLibrary](AGDeviceLibrary.md)
 - [AGDeviceLibraryListener](AGDeviceLibraryListener.md)
