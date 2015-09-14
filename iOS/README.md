@@ -8,7 +8,7 @@
 
 ## Installation
 
-1. [Download the latest release](https://github.com/actigraph/ActigraphLinkSDK/releases/download/v1.0-ios/ios_archive.zip) of the SDK and add the following files to your Xcode project
+1. [Download the latest release](https://github.com/actigraph/ActigraphLinkSDK/releases/download/v1.0/ios_archive.zip) of the SDK and add the following files to your Xcode project
 	- AGDeviceSDK.h
 	- AGDeviceSDKDelegate.h
 	- ActiGraphSDK.h
