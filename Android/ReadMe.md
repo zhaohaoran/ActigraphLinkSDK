@@ -11,7 +11,7 @@ This release of the Link SDK is currently in ALPHA state.  Currently, the SDK re
 ## Installation
 
 1. Download the following files and include them in your project
- - [agdevicelibrary-release.aar](/actigraph/ActigraphLinkSDK/tree/master/LinkSDKExampleApp/libs/agdevicelibrary-release.aar)
+ - [agdevicelibrary-release.aar](LinkSDKExampleApp/libs/agdevicelibrary-release.aar)
 
 #### Android Studio Instructions
 - Download .aar file
