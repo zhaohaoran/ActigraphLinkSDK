@@ -18,6 +18,6 @@ The ActiGraph Software Development Kit (SDK) allows for users to build their own
 
 Use the following links to get more information on the SDK specific to your platform.
 
-[ActiGraph Java SDK](Android/readme.md)
+[ActiGraph Java SDK](Android/)
 
-[ActiGraph iOS SDK](iOS/readme.md)
+[ActiGraph iOS SDK](iOS/)
