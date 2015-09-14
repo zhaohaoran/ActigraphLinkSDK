@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F5BD8B92-362A-4A31-9FCF-3AA67BF7E04B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ActiGraphiOSSDKExampleApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7E0752B8490ED46C6DB37B3BAE7C5A92D68E6F5B</key>
+		<string>https://github.com/actigraph/ActigraphLinkSDK</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS/ActiGraphiOSSDKExampleApp.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7E0752B8490ED46C6DB37B3BAE7C5A92D68E6F5B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/actigraph/ActigraphLinkSDK</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7E0752B8490ED46C6DB37B3BAE7C5A92D68E6F5B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7E0752B8490ED46C6DB37B3BAE7C5A92D68E6F5B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ActigraphLinkSDK</string>
+		</dict>
+	</array>
+</dict>
+</plist>

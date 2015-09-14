@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC9F98D87F3D2EC68AD02357 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E2CDFCA1C9365912F94FE6 /* libPods.a */; };
+		B6001E291B86254D0053134F /* FoundDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = B6001E281B86254D0053134F /* FoundDevice.m */; };
+		B6001E2C1B862E6B0053134F /* RawConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B6001E2B1B862E6B0053134F /* RawConfig.m */; };
+		B6001E2F1B862E950053134F /* IMUConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B6001E2E1B862E950053134F /* IMUConfig.m */; };
+		B65823361B8657AB00FEEF0B /* EpochConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B65823351B8657AB00FEEF0B /* EpochConfig.m */; };
+		B66AF8B21B7CE9D3005CACA3 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B66AF8B11B7CE9D3005CACA3 /* Podfile */; };
+		B68D964F1BA74789001FD68B /* libAGDeviceSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B68D964E1BA74789001FD68B /* libAGDeviceSDK.a */; };
+		B69FB1D91B7CF34C00DA79FE /* UITextViewLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = B69FB1D81B7CF34C00DA79FE /* UITextViewLogger.m */; };
+		B6E778A51B7BEA83004BE790 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E778A41B7BEA83004BE790 /* main.m */; };
+		B6E778A81B7BEA83004BE790 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E778A71B7BEA83004BE790 /* AppDelegate.m */; };
+		B6E778AB1B7BEA83004BE790 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E778AA1B7BEA83004BE790 /* MasterViewController.m */; };
+		B6E778AE1B7BEA83004BE790 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E778AD1B7BEA83004BE790 /* DetailViewController.m */; };
+		B6E778B11B7BEA83004BE790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E778AF1B7BEA83004BE790 /* Main.storyboard */; };
+		B6E778B31B7BEA83004BE790 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6E778B21B7BEA83004BE790 /* Images.xcassets */; };
+		B6E778B61B7BEA83004BE790 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6E778B41B7BEA83004BE790 /* LaunchScreen.xib */; };
+		B6E778C21B7BEA83004BE790 /* ActiGraphiOSSDKExampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E778C11B7BEA83004BE790 /* ActiGraphiOSSDKExampleAppTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B6E778BC1B7BEA83004BE790 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6E778971B7BEA83004BE790 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6E7789E1B7BEA83004BE790;
+			remoteInfo = ActiGraphiOSSDKExampleApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06E2CDFCA1C9365912F94FE6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		87CFD9F018C39C79D5DF0733 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B6001E271B86254D0053134F /* FoundDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundDevice.h; sourceTree = "<group>"; };
+		B6001E281B86254D0053134F /* FoundDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundDevice.m; sourceTree = "<group>"; };
+		B6001E2A1B862E6B0053134F /* RawConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RawConfig.h; sourceTree = "<group>"; };
+		B6001E2B1B862E6B0053134F /* RawConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RawConfig.m; sourceTree = "<group>"; };
+		B6001E2D1B862E950053134F /* IMUConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMUConfig.h; sourceTree = "<group>"; };
+		B6001E2E1B862E950053134F /* IMUConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMUConfig.m; sourceTree = "<group>"; };
+		B65823341B8657AB00FEEF0B /* EpochConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpochConfig.h; sourceTree = "<group>"; };
+		B65823351B8657AB00FEEF0B /* EpochConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpochConfig.m; sourceTree = "<group>"; };
+		B65823371B8659B400FEEF0B /* ExampleAppModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleAppModels.h; sourceTree = "<group>"; };
+		B66AF8B11B7CE9D3005CACA3 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B68D964C1BA74789001FD68B /* AGDeviceSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGDeviceSDK.h; sourceTree = "<group>"; };
+		B68D964D1BA74789001FD68B /* AGDeviceSDKDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGDeviceSDKDelegate.h; sourceTree = "<group>"; };
+		B68D964E1BA74789001FD68B /* libAGDeviceSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAGDeviceSDK.a; sourceTree = "<group>"; };
+		B68D96501BA748EE001FD68B /* ActiGraphSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiGraphSDK.h; sourceTree = "<group>"; };
+		B69FB1D71B7CF34C00DA79FE /* UITextViewLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextViewLogger.h; sourceTree = "<group>"; };
+		B69FB1D81B7CF34C00DA79FE /* UITextViewLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextViewLogger.m; sourceTree = "<group>"; };
+		B69FB1DA1B7CFE3B00DA79FE /* ActiGraphiOSSDKExampleApp-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ActiGraphiOSSDKExampleApp-PrefixHeader.pch"; sourceTree = "<group>"; };
+		B69FB2041B7D0DFE00DA79FE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B6E7789F1B7BEA83004BE790 /* ActiGraphiOSSDKExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiGraphiOSSDKExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6E778A31B7BEA83004BE790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6E778A41B7BEA83004BE790 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B6E778A61B7BEA83004BE790 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B6E778A71B7BEA83004BE790 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B6E778A91B7BEA83004BE790 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		B6E778AA1B7BEA83004BE790 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		B6E778AC1B7BEA83004BE790 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		B6E778AD1B7BEA83004BE790 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		B6E778B01B7BEA83004BE790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B6E778B21B7BEA83004BE790 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B6E778B51B7BEA83004BE790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B6E778BB1B7BEA83004BE790 /* ActiGraphiOSSDKExampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiGraphiOSSDKExampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6E778C01B7BEA83004BE790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6E778C11B7BEA83004BE790 /* ActiGraphiOSSDKExampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActiGraphiOSSDKExampleAppTests.m; sourceTree = "<group>"; };
+		C9329C03B32F48F9D0D1C2E9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B6E7789C1B7BEA83004BE790 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B68D964F1BA74789001FD68B /* libAGDeviceSDK.a in Frameworks */,
+				AC9F98D87F3D2EC68AD02357 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6E778B81B7BEA83004BE790 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4AA5F0D6A5E194687794FB58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87CFD9F018C39C79D5DF0733 /* Pods.debug.xcconfig */,
+				C9329C03B32F48F9D0D1C2E9 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B6001E261B86251E0053134F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B6001E271B86254D0053134F /* FoundDevice.h */,
+				B6001E281B86254D0053134F /* FoundDevice.m */,
+				B6001E2A1B862E6B0053134F /* RawConfig.h */,
+				B6001E2B1B862E6B0053134F /* RawConfig.m */,
+				B6001E2D1B862E950053134F /* IMUConfig.h */,
+				B6001E2E1B862E950053134F /* IMUConfig.m */,
+				B65823341B8657AB00FEEF0B /* EpochConfig.h */,
+				B65823351B8657AB00FEEF0B /* EpochConfig.m */,
+				B65823371B8659B400FEEF0B /* ExampleAppModels.h */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B69FB1D61B7CF33F00DA79FE /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				B69FB1D71B7CF34C00DA79FE /* UITextViewLogger.h */,
+				B69FB1D81B7CF34C00DA79FE /* UITextViewLogger.m */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		B6E778961B7BEA83004BE790 = {
+			isa = PBXGroup;
+			children = (
+				B66AF8B11B7CE9D3005CACA3 /* Podfile */,
+				B6E778A11B7BEA83004BE790 /* ActiGraphiOSSDKExampleApp */,
+				B6E778BE1B7BEA83004BE790 /* ActiGraphiOSSDKExampleAppTests */,
+				B6E778A01B7BEA83004BE790 /* Products */,
+				4AA5F0D6A5E194687794FB58 /* Pods */,
+				F44F74A46C44DCC26BF9516A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B6E778A01B7BEA83004BE790 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B6E7789F1B7BEA83004BE790 /* ActiGraphiOSSDKExampleApp.app */,
+				B6E778BB1B7BEA83004BE790 /* ActiGraphiOSSDKExampleAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B6E778A11B7BEA83004BE790 /* ActiGraphiOSSDKExampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				B6001E261B86251E0053134F /* Models */,
+				B69FB1D61B7CF33F00DA79FE /* Libs */,
+				B6E778A61B7BEA83004BE790 /* AppDelegate.h */,
+				B69FB1DA1B7CFE3B00DA79FE /* ActiGraphiOSSDKExampleApp-PrefixHeader.pch */,
+				B6E778A71B7BEA83004BE790 /* AppDelegate.m */,
+				B6E778A91B7BEA83004BE790 /* MasterViewController.h */,
+				B6E778AA1B7BEA83004BE790 /* MasterViewController.m */,
+				B6E778AC1B7BEA83004BE790 /* DetailViewController.h */,
+				B6E778AD1B7BEA83004BE790 /* DetailViewController.m */,
+				B6E778AF1B7BEA83004BE790 /* Main.storyboard */,
+				B6E778B21B7BEA83004BE790 /* Images.xcassets */,
+				B6E778B41B7BEA83004BE790 /* LaunchScreen.xib */,
+				B6E778A21B7BEA83004BE790 /* Supporting Files */,
+			);
+			path = ActiGraphiOSSDKExampleApp;
+			sourceTree = "<group>";
+		};
+		B6E778A21B7BEA83004BE790 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B6E778A31B7BEA83004BE790 /* Info.plist */,
+				B6E778A41B7BEA83004BE790 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B6E778BE1B7BEA83004BE790 /* ActiGraphiOSSDKExampleAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				B6E778C11B7BEA83004BE790 /* ActiGraphiOSSDKExampleAppTests.m */,
+				B6E778BF1B7BEA83004BE790 /* Supporting Files */,
+			);
+			path = ActiGraphiOSSDKExampleAppTests;
+			sourceTree = "<group>";
+		};
+		B6E778BF1B7BEA83004BE790 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B6E778C01B7BEA83004BE790 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F44F74A46C44DCC26BF9516A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B68D96501BA748EE001FD68B /* ActiGraphSDK.h */,
+				B68D964C1BA74789001FD68B /* AGDeviceSDK.h */,
+				B68D964D1BA74789001FD68B /* AGDeviceSDKDelegate.h */,
+				B68D964E1BA74789001FD68B /* libAGDeviceSDK.a */,
+				B69FB2041B7D0DFE00DA79FE /* SystemConfiguration.framework */,
+				06E2CDFCA1C9365912F94FE6 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B6E7789E1B7BEA83004BE790 /* ActiGraphiOSSDKExampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6E778C51B7BEA83004BE790 /* Build configuration list for PBXNativeTarget "ActiGraphiOSSDKExampleApp" */;
+			buildPhases = (
+				0980EAA7D45058112F4553B3 /* Check Pods Manifest.lock */,
+				B6E7789B1B7BEA83004BE790 /* Sources */,
+				B6E7789C1B7BEA83004BE790 /* Frameworks */,
+				B6E7789D1B7BEA83004BE790 /* Resources */,
+				721E11A80AA69713CA91B4DE /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ActiGraphiOSSDKExampleApp;
+			productName = ActiGraphiOSSDKExampleApp;
+			productReference = B6E7789F1B7BEA83004BE790 /* ActiGraphiOSSDKExampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B6E778BA1B7BEA83004BE790 /* ActiGraphiOSSDKExampleAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6E778C81B7BEA83004BE790 /* Build configuration list for PBXNativeTarget "ActiGraphiOSSDKExampleAppTests" */;
+			buildPhases = (
+				B6E778B71B7BEA83004BE790 /* Sources */,
+				B6E778B81B7BEA83004BE790 /* Frameworks */,
+				B6E778B91B7BEA83004BE790 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B6E778BD1B7BEA83004BE790 /* PBXTargetDependency */,
+			);
+			name = ActiGraphiOSSDKExampleAppTests;
+			productName = ActiGraphiOSSDKExampleAppTests;
+			productReference = B6E778BB1B7BEA83004BE790 /* ActiGraphiOSSDKExampleAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B6E778971B7BEA83004BE790 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = ActiGraph;
+				TargetAttributes = {
+					B6E7789E1B7BEA83004BE790 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = W342BCL8RW;
+					};
+					B6E778BA1B7BEA83004BE790 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = B6E7789E1B7BEA83004BE790;
+					};
+				};
+			};
+			buildConfigurationList = B6E7789A1B7BEA83004BE790 /* Build configuration list for PBXProject "ActiGraphiOSSDKExampleApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B6E778961B7BEA83004BE790;
+			productRefGroup = B6E778A01B7BEA83004BE790 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B6E7789E1B7BEA83004BE790 /* ActiGraphiOSSDKExampleApp */,
+				B6E778BA1B7BEA83004BE790 /* ActiGraphiOSSDKExampleAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B6E7789D1B7BEA83004BE790 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6E778B11B7BEA83004BE790 /* Main.storyboard in Resources */,
+				B6E778B61B7BEA83004BE790 /* LaunchScreen.xib in Resources */,
+				B66AF8B21B7CE9D3005CACA3 /* Podfile in Resources */,
+				B6E778B31B7BEA83004BE790 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6E778B91B7BEA83004BE790 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0980EAA7D45058112F4553B3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		721E11A80AA69713CA91B4DE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B6E7789B1B7BEA83004BE790 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6E778A81B7BEA83004BE790 /* AppDelegate.m in Sources */,
+				B65823361B8657AB00FEEF0B /* EpochConfig.m in Sources */,
+				B6E778AB1B7BEA83004BE790 /* MasterViewController.m in Sources */,
+				B6E778A51B7BEA83004BE790 /* main.m in Sources */,
+				B6E778AE1B7BEA83004BE790 /* DetailViewController.m in Sources */,
+				B6001E291B86254D0053134F /* FoundDevice.m in Sources */,
+				B69FB1D91B7CF34C00DA79FE /* UITextViewLogger.m in Sources */,
+				B6001E2C1B862E6B0053134F /* RawConfig.m in Sources */,
+				B6001E2F1B862E950053134F /* IMUConfig.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6E778B71B7BEA83004BE790 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6E778C21B7BEA83004BE790 /* ActiGraphiOSSDKExampleAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B6E778BD1B7BEA83004BE790 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6E7789E1B7BEA83004BE790 /* ActiGraphiOSSDKExampleApp */;
+			targetProxy = B6E778BC1B7BEA83004BE790 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B6E778AF1B7BEA83004BE790 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6E778B01B7BEA83004BE790 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B6E778B41B7BEA83004BE790 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6E778B51B7BEA83004BE790 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B6E778C31B7BEA83004BE790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B6E778C41B7BEA83004BE790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B6E778C61B7BEA83004BE790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87CFD9F018C39C79D5DF0733 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "${PROJECT}/${PROJECT}-PrefixHeader.pch";
+				INFOPLIST_FILE = ActiGraphiOSSDKExampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/ActiGraphiOSSDKExampleApp-awpdpubycdueitgbwhmsmovfgmmw/Build/Products/Debug-iphoneos",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		B6E778C71B7BEA83004BE790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9329C03B32F48F9D0D1C2E9 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "${PROJECT}/${PROJECT}-PrefixHeader.pch";
+				INFOPLIST_FILE = ActiGraphiOSSDKExampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/ActiGraphiOSSDKExampleApp-awpdpubycdueitgbwhmsmovfgmmw/Build/Products/Debug-iphoneos",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		B6E778C91B7BEA83004BE790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ActiGraphiOSSDKExampleAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActiGraphiOSSDKExampleApp.app/ActiGraphiOSSDKExampleApp";
+			};
+			name = Debug;
+		};
+		B6E778CA1B7BEA83004BE790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ActiGraphiOSSDKExampleAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActiGraphiOSSDKExampleApp.app/ActiGraphiOSSDKExampleApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B6E7789A1B7BEA83004BE790 /* Build configuration list for PBXProject "ActiGraphiOSSDKExampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6E778C31B7BEA83004BE790 /* Debug */,
+				B6E778C41B7BEA83004BE790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6E778C51B7BEA83004BE790 /* Build configuration list for PBXNativeTarget "ActiGraphiOSSDKExampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6E778C61B7BEA83004BE790 /* Debug */,
+				B6E778C71B7BEA83004BE790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6E778C81B7BEA83004BE790 /* Build configuration list for PBXNativeTarget "ActiGraphiOSSDKExampleAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6E778C91B7BEA83004BE790 /* Debug */,
+				B6E778CA1B7BEA83004BE790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B6E778971B7BEA83004BE790 /* Project object */;
+}
